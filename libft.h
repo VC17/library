@@ -6,7 +6,7 @@
 /*   By: vchandra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/11 22:51:33 by vchandra          #+#    #+#             */
-/*   Updated: 2018/03/14 23:03:41 by vchandra         ###   ########.fr       */
+/*   Updated: 2018/03/15 14:43:54 by vchandra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,29 +107,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_countwords(char const *str, char c);
-char				*ft_strndup(const char *s1, size_t n);
-char				*ft_capitalize(char *s);
-t_list				*ft_lst_reverse(t_list *alst);
-void				*ft_realloc(void *ptr, size_t prev_size, size_t new_size);
-char				*ft_strjoinch(char const *s1, char c);
-char				*ft_strnchr(char *s, char c, int offset);
-int					ft_copyuntil(char **dst, char *src, char c);
-int					ft_strstartswith(char *s1, char *s2);
 int					ft_intlen(int num);
-int					ft_strendswith(char *s1, char *s2);
-char				*ft_pathjoin(char *p1, char *p2);
-void				ft_lstaddback(t_list **alst, t_list *new);
-int					get_next_line(const int fd, char **line);
-void				ft_putnstr(char *str, int n);
-char				*ft_strreplace(char *str, char *term, char *replace_by);
 int					ft_isemptystr(char *str, int consider_space);
-char				**ft_strsplitall(char const *s);
-int					ft_countwordsall(char const *str);
-void				ft_freestrarr(char **arr);
-char				*ft_strjoincl(char *s1, char *s2, int free_both);
-char				*ft_strjoinchcl(char *s1, char c);
-int					ft_count2darray(char **arr);
-int					ft_strarrmax(char **arr);
-char				*ft_get_parent_path(char *path);
 
 #endif

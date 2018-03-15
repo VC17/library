@@ -6,7 +6,7 @@
 #    By: vchandra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/11 21:47:29 by vchandra          #+#    #+#              #
-#    Updated: 2018/03/14 22:21:40 by vchandra         ###   ########.fr        #
+#    Updated: 2018/03/15 14:51:33 by vchandra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,57 +67,25 @@ FILES 		+= ft_memcmp.c \
 				ft_lstadd.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
-				ft_strndup.c \
-				ft_capitalize.c \
-				ft_realloc.c \
-				ft_strjoinch.c \
-				ft_strnchr.c \
-				ft_copyuntil.c \
-				ft_strstartswith.c \
 				ft_intlen.c \
-				ft_strendswith.c \
-				ft_pathjoin.c \
-				ft_lstaddback.c \
-				get_next_line.c \
-				ft_putnstr.c \
-				ft_strreplace.c \
-				ft_isemptystr.c \
-				ft_strsplitall.c \
-				ft_countwordsall.c \
-				ft_freestrarr.c \
-				ft_strjoincl.c \
-				ft_strjoinchcl.c \
-				ft_count2darray.c \
-				ft_strarrmax.c \
-				ft_get_parent_path.c
+				ft_isemptystr.c 
 OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)
 
-copy:
-	cp -f libc-funcs/*.c .
-	cp -f additional-funcs/*.c .
-	cp -f bonus-funcs/*.c .
-	cp -f personal-funcs/*.c .
 
-# This won't run if the .o files don't exist or are not modified
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-# This won't run if the source files don't exist or are not modified
 $(OBJ): $(FILES)
 	gcc $(CFLAGS) $(FILES)
 
 clean:
 	rm -f $(OBJ)
-	#rm -f $(FILES) # comment this line if you don't want it to remove the source files from the root
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-# I use .PHONY to make sure that gnu make will still run even if files called
-# clean / fclean / all and re already exist in the directory
 .PHONY: clean fclean all re
-
